@@ -2,6 +2,7 @@
 Suite Setup       Set Screenshot Directory    ${SCREENSHOTS DIR}${/}smoke
 Resource          Keywords.robot
 
+
 *** Test Cases ***
 Lab Version
     Capture Page Screenshot    00-smoke.png

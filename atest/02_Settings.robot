@@ -2,6 +2,7 @@
 Suite Setup       Setup Suite For Screenshots    settings
 Resource          Keywords.robot
 
+
 *** Test Cases ***
 Settings
     Open in Advanced Settings    ${LSP PLUGIN ID}

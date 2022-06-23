@@ -3,8 +3,10 @@ Suite Setup       Setup Suite For Screenshots    gh-403
 Force Tags        feature:jump-to-definition    gh:403
 Resource          ../Keywords.robot
 
+
 *** Variables ***
 ${FOLDER WITH SPACE}    a földer
+
 
 *** Test Cases ***
 Python Jumps between Files
@@ -40,6 +42,7 @@ Ctrl Click And Jumping Back Works
     Click Element    ${sel}    modifier=ALT
     Wait Until Keyword Succeeds    10 x    1 s    Cursor Should Jump    ${original}
     [Teardown]    Clean Up After Working With File    jump.py
+
 
 *** Keywords ***
 Copy Files to Folder With Spaces

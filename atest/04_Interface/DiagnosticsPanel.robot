@@ -5,6 +5,7 @@ Force Tags        ui:notebook    aspect:ls:features
 Test Setup        Set Up
 Test Teardown     Clean Up
 
+
 *** Variables ***
 ${EXPECTED_COUNT}    4
 ${DIAGNOSTIC}     W291 trailing whitespace (pycodestyle)
@@ -13,6 +14,7 @@ ${DIAGNOSTIC MESSAGE R}    Closing curly-braces should always be on their own li
 ${R CELL}         %%R\n{}
 ${MENU COLUMNS}    xpath://div[contains(@class, 'lm-Menu-itemLabel')][contains(text(), "columns")]
 ${LAB MENU}       css:.lm-Menu
+
 
 *** Test Cases ***
 Diagnostics Panel Opens
@@ -111,6 +113,7 @@ Diagnostics Panel Works After Removing Foreign Document
     Press Keys    None    1234567
     Wait Until Keyword Succeeds    10 x    1s    Element Should Contain    ${DIAGNOSTICS PANEL}    ${DIAGNOSTIC MESSAGE}
     Wait Until Keyword Succeeds    10 x    1s    Element Should Not Contain    ${DIAGNOSTICS PANEL}    ${DIAGNOSTIC MESSAGE R}
+
 
 *** Keywords ***
 Open Context Menu Over W291
